@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Roadmap from './Roadmap';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className="swatch-1">
+      <Router>
+        <Roadmap path='/' component={Roadmap} exact/>
+
+      </Router>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
